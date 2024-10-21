@@ -1,7 +1,5 @@
 # Using OIDC to Authenticate from GitHub Actions to Azure for Terraform deployments
 ## Overview
-OIDC allows your GitHub Actions workflows to access resources in Azure, without needing to store the Azure credentials as long-lived GitHub secrets.
-
 You need to configure a federated identity credential on a service principal or a managed identity:
 - **User Assigned Managed Identity**: does not require elevated permissions in Azure Active Directory and has a longer token timeout.
 - **Service Principals (App Registrations)**: requires permission to create Applications in Azure Active Directory.
@@ -20,7 +18,7 @@ Before you use this example, you need:
 ###  Clone the repo and setup your variables
 1. Clone this repository to your local machine.
 2. Open the repo in Visual Studio Code. (Hint: In a terminal you can open Visual Studio Code by navigating to the folder and running code .).
-3. Navigate to the `demo` folder and create a new file called `terraform.tfvars`.
+3. Navigate to the `demo/azure` folder and create a new file called `terraform.tfvars`.
 4. In the `terraform.tfvars` file add the following:
 ```hcl
  environment = "<value>"

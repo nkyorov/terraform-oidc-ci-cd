@@ -3,7 +3,7 @@ data "azurerm_resource_group" "this" {
 }
 
 module "azure-github-oidc" {
-  source = "../modules/github"
+  source = "../../modules/azure"
 
   environment      = var.environment
   managed_identity = var.managed_identity
